@@ -26,10 +26,7 @@ router.get("/", (req, res) => {
     .catch((err) => {
       res.status(500).json({
         status: "error",
-        message: "Unable to communicate with database",
-        data: {
-          error: err,
-        },
+        data: { message: err },
       });
     });
 });
@@ -66,10 +63,7 @@ router.get("/:id", (req, res) => {
     .catch((err) => {
       res.status(500).json({
         status: "error",
-        message: "Unable to communicate with database",
-        data: {
-          error: err,
-        },
+        data: { message: err },
       });
     });
 });
@@ -89,10 +83,7 @@ router.post("/", (req, res) => {
     .catch((err) => {
       res.status(500).json({
         status: "error",
-        message: "Unable to communicate with database",
-        data: {
-          error: err,
-        },
+        data: { message: err },
       });
     });
 });
@@ -122,10 +113,7 @@ router.put("/:id", (req, res) => {
     .catch((err) => {
       res.status(500).json({
         status: "error",
-        message: "Unable to communicate with database",
-        data: {
-          error: err,
-        },
+        data: { message: err },
       });
     });
 });
@@ -152,10 +140,7 @@ router.delete("/:id", (req, res) => {
     .catch((err) => {
       res.status(500).json({
         status: "error",
-        message: "Unable to communicate with database",
-        data: {
-          error: err,
-        },
+        data: { message: err },
       });
     });
 });
