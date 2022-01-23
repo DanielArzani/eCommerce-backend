@@ -96,7 +96,7 @@ router.put("/:id", (req, res) => {
     }
   )
     .then((dbCategoryData) => {
-      if (!dbCategoryData) {
+      if (dbCategoryData.includes(0)) {
         res.status(404).json({
           status: "fail",
           message: "No category found with that ID",
